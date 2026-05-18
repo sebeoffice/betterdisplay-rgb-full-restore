@@ -54,8 +54,6 @@ cat > "$PLIST" <<PLIST
   </dict>
   <key>RunAtLoad</key>
   <true/>
-  <key>StartInterval</key>
-  <integer>60</integer>
   <key>StandardOutPath</key>
   <string>/tmp/betterdisplay-rgb-full-restore.out.log</string>
   <key>StandardErrorPath</key>

@@ -32,7 +32,11 @@ The installer:
 - finds the first compatible `SDR RGB Full` mode for the display
 - installs a restore script under `~/Library/Scripts/BetterDisplayRGBFullRestore`
 - installs a LaunchAgent under `~/Library/LaunchAgents`
-- runs it at login and every 60 seconds
+- runs it once at login
+
+It intentionally does not run every minute. Reapplying display connection modes
+can wake some monitors or make BetterDisplay simulate user activity, which may
+prevent clean sleep.
 
 ## Check Current Modes
 
@@ -49,3 +53,6 @@ The installer:
 ## Notes
 
 This does not modify BetterDisplay itself. It simply asks BetterDisplay to reapply a known-good connection mode.
+
+If your display changes mode after wake, run the installed script manually or
+use BetterDisplay Pro's built-in configuration protection instead of polling.
